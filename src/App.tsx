@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ProjectListings from './components/ProjectsListings/ProjectListings';
+import OperationsListings from './components/OperationListings/OperationListings';
 
 function App() {
+  const [showOperations, setShowOperations] = useState<string>('');
+  console.log(showOperations)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ProjectListings setShowOperations={setShowOperations}/>
+      <OperationsListings projectToShowOprFor ={showOperations} setShowOperations={setShowOperations}/>
     </div>
   );
 }

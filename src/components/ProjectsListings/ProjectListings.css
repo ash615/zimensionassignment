@@ -1,0 +1,18 @@
+.projectsContainer{
+    width: 30%;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+.inputProjName{
+    height: 20px;
+    padding: 10px;
+    width: 70%;
+    border: 1 px solid black;
+    border-radius: 5px ;
+}
